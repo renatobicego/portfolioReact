@@ -13,6 +13,7 @@ const PhotoCard = ({photo} : {photo: Photo}) => {
         className="relative flex items-end w-full h-full"
       >
         <img
+          loading="lazy"
           className="w-full h-full object-cover rounded-lg absolute left-0 top-0"
           src={photo.imgSrc}
           alt={photo.altText}
