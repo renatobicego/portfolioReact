@@ -9,7 +9,7 @@ import Contact from "./components/sections/Contact";
 import { ModelLoadedContext } from "./ModelLoadedContext";
 import "./loader.css";
 function App() {
-  const mainRef = useRef(null);
+  const mainRef = useRef(null)
   const { modelLoaded } = useContext(ModelLoadedContext);
   const { scrollYProgress } = useScroll({
     target: mainRef,
