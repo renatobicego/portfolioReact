@@ -11,30 +11,35 @@ export function Model(props: any) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-expect-error: It has this property
             geometry={nodes.Object_4.geometry}
             material={materials["brush_Ink.001"]}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-expect-error: It has this property
             geometry={nodes.Object_6.geometry}
             material={materials["brush_Ink.001"]}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-expect-error: It has this property
             geometry={nodes.Object_8.geometry}
             material={materials["brush_Ink.001"]}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-expect-error: It has this property
             geometry={nodes.Object_12.geometry}
             material={materials["brush_Marker.001"]}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-expect-error: It has this property
             geometry={nodes.Object_10.geometry}
             material={materials["brush_ThickPaint.001"]}
           />
