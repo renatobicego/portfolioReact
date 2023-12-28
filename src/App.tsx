@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import "./App.css";
 import Experience from "./Experience/Experience";
 import Header from "./components/Header";
@@ -6,11 +6,9 @@ import { useScroll, useSpring } from "framer-motion";
 import DesignDev from "./components/sections/DesignDev";
 import Photography from "./components/sections/Photography";
 import Contact from "./components/sections/Contact";
-import { ModelLoadedContext } from "./ModelLoadedContext";
 import "./loader.css";
 function App() {
   const mainRef = useRef(null)
-  const { modelLoaded } = useContext(ModelLoadedContext);
   const { scrollYProgress } = useScroll({
     target: mainRef,
   });
@@ -26,15 +24,14 @@ function App() {
   return (
     <>
       <Header />
-      {!modelLoaded && (
-        <div
-          className={`w-screen h-screen absolute z-[1000] left-0 top-0 bg-[#222222] `}
-        >
-          <div className="scene">
-            <div className="loader"></div>
-          </div>
+      <div
+        id="loaderContainer"
+        className={`w-screen h-screen fixed z-[1000] left-0 top-0 bg-[#222222] `}
+      >
+        <div className="scene">
+          <div className="loader"></div>
         </div>
-      )}
+      </div>
       <main
         ref={mainRef}
         className="min-h-screen w-full px-8 md:px-16 relative z-0"

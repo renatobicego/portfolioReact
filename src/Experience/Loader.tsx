@@ -1,22 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Html, useProgress } from "@react-three/drei";
-import { useContext, useEffect } from "react";
-import { ModelLoadedContext } from "../ModelLoadedContext";
+import { useEffect } from "react";
+
 const Loader = ({
   setHasLoaded,
 }: {
   setHasLoaded: (state: boolean) => void;
 }) => {
   const { progress } = useProgress();
-  const {changeState} = useContext(ModelLoadedContext)
 
   useEffect(() => {
     // Check if progress has reached 100
-    if (progress >= 98) {
+    if (progress >= 99) {
       // Set hasLoaded to false
       setHasLoaded(true);
-      changeState(true)
+      document.getElementById('loaderContainer')?.classList.add('!hidden')
     }
+    
   }, [progress, setHasLoaded]);
   
   return (

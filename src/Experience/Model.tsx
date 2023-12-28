@@ -49,4 +49,4 @@ export function Model(props: any) {
   );
 }
 
-useGLTF.preload("/loaderWanderer.glb");
+useGLTF.preload("/wanderer.glb");
