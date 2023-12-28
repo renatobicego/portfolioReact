@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    border-radius: 30px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #292929; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e5e5e5; 
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0; 
+  }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@layer components {
+  .title {
+    @apply drop-shadow-xl text-4xl xs:text-5xl md:text-7xl lg:text-6xl 3xl:text-8xl
+  }
+  .subtitle {
+    @apply drop-shadow-xl text-xl xs:text-3xl md:text-4xl lg:text-3xl 3xl:text-5xl text-right
+  }
+  .input {
+    @apply p-4 bg-[#ffffff82] backdrop-blur-sm placeholder:text-[#222222] rounded-[30px] outline-none resize-none shadow-md
+  }
+  .sectionContainer {
+    @apply flex flex-col items-end justify-center lg:justify-end h-screen
+      w-full  text-[#222222] snap-end relative
+  } 
+  .btn-section {
+    @apply mt-5 text-white rounded-[30px] bg-[#222222] py-2.5 px-11 xs:text-lg md:text-2xl
+  }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  padding: 0 !important;
+}
+
+body {
+    background-color: #222222;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 !important;
+}
+
+.border-text {
+  text-shadow: 0px 0px 0px #1a1919;
+}
+
+
+.vertical-header {
+  writing-mode: vertical-rl;
+  font-weight: 300;
+}
+
+html,
+body,
+#root
+{
+    overflow-x: hidden;
+
+} 
+
+.MuiPaper-elevation{
+  background-color: #22222290 !important;
+}
