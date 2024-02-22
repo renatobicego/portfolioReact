@@ -4,6 +4,13 @@ import { useState } from "react";
 
 const urlProjects = [
   {
+    href: "https://dtusiland.com",
+    imgSrc: "https://firebasestorage.googleapis.com/v0/b/portfolio-renato.appspot.com/o/projects%2Fopengraph-image.png?alt=media&token=ed6ba61f-c4b8-41b8-a2df-81dfe2fef247",
+    altText: "Estudio Dutsiland link to project",
+    title: "Estudio Dutsiland",
+    fields: ["Frontend", "WebGL / Creative Development"],
+  },
+  {
     href: "https://www.behance.net/gallery/159419807/Pole-Vault",
     imgSrc: "https://firebasestorage.googleapis.com/v0/b/portfolio-renato.appspot.com/o/projects%2Fpolevault.png?alt=media&token=c169a5fb-d9b9-4bd0-8a94-5531d3adcac8",
     altText: "Pole vault app link to project",
