@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const urlProjects = [
   {
-    href: "https://dtusiland.com",
+    href: "https://dutsiland.com",
     imgSrc: "https://firebasestorage.googleapis.com/v0/b/portfolio-renato.appspot.com/o/projects%2Fopengraph-image.png?alt=media&token=ed6ba61f-c4b8-41b8-a2df-81dfe2fef247",
     altText: "Estudio Dutsiland link to project",
     title: "Estudio Dutsiland",
