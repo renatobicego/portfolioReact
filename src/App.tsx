@@ -8,7 +8,7 @@ import Photography from "./components/sections/Photography";
 import Contact from "./components/sections/Contact";
 import "./loader.css";
 function App() {
-  const mainRef = useRef(null)
+  const mainRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mainRef,
   });
@@ -20,9 +20,20 @@ function App() {
     velocity: 0.01,
     restSpeed: 2,
   });
-  
+
   return (
     <>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://renatobicego.com/",
+          url: "https://renatobicego.com/",
+          name: "Renato Bicego",
+          description:
+            "Creative Developer & UX Designer",
+        })}
+      </script>
       <Header />
       <div
         id="loaderContainer"
