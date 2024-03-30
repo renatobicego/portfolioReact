@@ -4,7 +4,7 @@ import {
   useFrame,
 } from "@react-three/fiber";
 import { MotionValue, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useMousePosition from "../utils/useMousePosition";
 import * as THREE from "three";
 import { PerspectiveCamera } from "@react-three/drei";
@@ -13,7 +13,7 @@ const Camera = (
   {
     scrollProgress,
     hasLoaded,
-    setHasLoaded,
+    setHasLoaded
   }: {
     scrollProgress: MotionValue;
     hasLoaded: boolean;
@@ -21,6 +21,7 @@ const Camera = (
   },
   props: PerspectiveCameraProps
 ) => {
+  const [blockCameraAnimation, setBlockCameraAnimation] = useState(true)
   const cameraGroupRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null);
   const { mousePos, sizes } = useMousePosition();
   const newCameraPosition = new THREE.Vector3();
@@ -32,7 +33,7 @@ const Camera = (
   const animateCamera = (state: RootState) => {
     if (!cameraGroupRef.current) return;
 
-    const progress = Math.min(1, state.clock.elapsedTime / 1.5);
+    const progress = Math.min(1, state.clock.elapsedTime / 2);
 
     const animatedX = lerp(2, xCamPos.get(), progress);
     const animatedY = lerp(30, yCamPos.get(), progress);
@@ -43,12 +44,13 @@ const Camera = (
     state.camera.lookAt(lookAtVector);
 
     if (progress === 1) {
-      setHasLoaded(false);
+      setBlockCameraAnimation(false);
+      document.querySelector('header')?.classList.add('opacity-100')
     }
   };
 
   const handleParallax = (state: RootState) => {
-    if (!cameraGroupRef.current || hasLoaded) return;
+    if (!cameraGroupRef.current || blockCameraAnimation) return;
     newCameraPosition.set(
       xCamPos.get() + mousePos.x,
       yCamPos.get() - mousePos.y,
@@ -61,17 +63,17 @@ const Camera = (
 
   const xCamPos = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [0, 0, -5, -3]
   );
   const yCamPos = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [0, 15, 6, 1]
   );
   const zCamPos = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [
       sizes.width > 1550 ? 9 : 20 - sizes.width / 200,
       15,
@@ -81,7 +83,7 @@ const Camera = (
   );
   const xCamLook = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [
       sizes.width > 1350 ? 1 : 4,
       3,
@@ -91,12 +93,12 @@ const Camera = (
   );
   const yCamLook = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [0, 1, 5, 1]
   );
   const zCamLook = useTransform(
     scrollProgress,
-    [0, 0.35, 0.68, 0.95],
+    [0, 0.35, 0.68, 0.98],
     [0, -2, 0, 0]
   );
 

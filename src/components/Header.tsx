@@ -21,7 +21,7 @@ const Header = () => {
   }, [openDrawer, open]);
   return (
     <header
-      className="flex fixed top-0 right-0 justify-end items-start lg:items-center 
+      className="flex fixed top-0 right-0 justify-end items-start lg:items-center transition-all duration-200 opacity-0
                 text-base 3xl:text-lg lg:pr-16 lg:h-auto lg:max-xl:text-sm lg:pt-[7.5vh] z-10"
     >
       <nav className="gap-x-8 list-none hidden lg:flex relative backdrop-blur-sm">

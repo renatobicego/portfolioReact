@@ -35,14 +35,7 @@ function App() {
         })}
       </script>
       <Header />
-      <div
-        id="loaderContainer"
-        className={`w-screen h-screen fixed z-[1000] left-0 top-0 bg-[#222222] `}
-      >
-        <div className="scene">
-          <div className="loader"></div>
-        </div>
-      </div>
+      
       <main
         ref={mainRef}
         className="min-h-screen w-full px-8 md:px-16 relative z-0"
@@ -59,16 +52,11 @@ function App() {
         <Contact />
         <Experience scrollProgress={scrollClamp} />
       </main>
-      <footer className="relative z-10 w-full md:w-1/2 lg:w-1/3 float-right md:mr-16">
-        <p className="text-center text-white drop-shadow-md">
+      <footer className="relative w-full bg-[#222222]/50 flex justify-end">
+        <p className="text-center text-white drop-shadow-md md:mr-16">
           "Wanderer above the sea of fog"{" "}
-          <a href="https://skfb.ly/6TB7s">(https://skfb.ly/6TB7s)</a>
-          by betocarrillo is licensed under Creative Commons
-          Attribution-ShareAlike
-          <a href="http://creativecommons.org/licenses/by-sa/4.0/">
-            (http://creativecommons.org/licenses/by-sa/4.0/)
-          </a>
-          .
+          <a href="https://skfb.ly/6TB7s">(https://skfb.ly/6TB7s) </a>
+          by betocarrillo.
         </p>
       </footer>
     </>

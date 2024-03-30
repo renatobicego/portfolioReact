@@ -1,19 +1,23 @@
-
 import { EffectComposer, ToneMapping } from "@react-three/postprocessing";
 import { PerspectiveCameraProps } from "@react-three/fiber";
 import { MotionValue } from "framer-motion";
 import { BlendFunction } from "postprocessing";
-import { Suspense, useState } from "react";
-import Loader from "./Loader";
+import { Suspense } from "react";
 import { Model } from "./Model";
 import Camera from "./Camera";
 
 const Wanderer = (
-  { scrollProgress }: { scrollProgress: MotionValue },
+  {
+    scrollProgress,
+    hasLoaded,
+    setHasLoaded
+  }: {
+    scrollProgress: MotionValue;
+    hasLoaded: boolean;
+    setHasLoaded: (state: boolean) => void;
+  },
   props: PerspectiveCameraProps
 ) => {
-  const [hasLoaded, setHasLoaded] = useState(false);
-
   return (
     <>
       <EffectComposer>
@@ -34,7 +38,7 @@ const Wanderer = (
         {...props}
         scrollProgress={scrollProgress}
       />
-      <Suspense fallback={<Loader setHasLoaded={setHasLoaded} />}>
+      <Suspense fallback={null}>
         <Model />
       </Suspense>
     </>
