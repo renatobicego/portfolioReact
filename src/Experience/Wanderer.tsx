@@ -9,12 +9,8 @@ import Camera from "./Camera";
 const Wanderer = (
   {
     scrollProgress,
-    hasLoaded,
-    setHasLoaded
   }: {
     scrollProgress: MotionValue;
-    hasLoaded: boolean;
-    setHasLoaded: (state: boolean) => void;
   },
   props: PerspectiveCameraProps
 ) => {
@@ -33,8 +29,6 @@ const Wanderer = (
       </EffectComposer>
       <color attach={"background"} args={["#C2CEEA"]} />
       <Camera
-        setHasLoaded={setHasLoaded}
-        hasLoaded={hasLoaded}
         {...props}
         scrollProgress={scrollProgress}
       />

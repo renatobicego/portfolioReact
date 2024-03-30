@@ -12,12 +12,8 @@ import { PerspectiveCamera } from "@react-three/drei";
 const Camera = (
   {
     scrollProgress,
-    hasLoaded,
-    setHasLoaded
   }: {
     scrollProgress: MotionValue;
-    hasLoaded: boolean;
-    setHasLoaded: (state: boolean) => void;
   },
   props: PerspectiveCameraProps
 ) => {
