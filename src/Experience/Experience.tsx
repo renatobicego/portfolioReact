@@ -18,6 +18,7 @@ const Experience = ({ scrollProgress }: { scrollProgress: MotionValue }) => {
         className="!fixed left-0 top-0 -z-[1] !h-[100lvh]"
       >
         <Wanderer
+          hasLoaded={hasLoaded}
           scrollProgress={scrollProgress}
         />
       </Canvas>

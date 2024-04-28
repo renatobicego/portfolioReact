@@ -7,6 +7,7 @@ import DesignDev from "./components/sections/DesignDev";
 import Photography from "./components/sections/Photography";
 import Contact from "./components/sections/Contact";
 import "./loader.css";
+
 function App() {
   const mainRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -38,11 +39,11 @@ function App() {
       
       <main
         ref={mainRef}
-        className="min-h-screen w-full px-8 md:px-16 relative z-0"
+        className="min-h-screen w-full px-5 md:px-16 relative z-0"
       >
         <section className="mb-40 text-right sectionContainer pb-20">
           <h1 className="title mb-2 md:mb-4">Renato Bicego</h1>
-          <h2 className="subtitle">Creative Developer & UX Designer</h2>
+          <h2 className="subtitle">Creative Developer <br className="sm:hidden" /> & UX Designer</h2>
           <p className="animate-bounce mt-6 py-2 px-4 bg-[#22222260] text-white rounded-[30px]">
             Scroll down
           </p>

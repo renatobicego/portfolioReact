@@ -28,6 +28,8 @@
     background: #a0a0a0; 
   }
 
+  
+
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;

@@ -22,7 +22,7 @@ const Contact = () => {
   };
   return (
     <section className="sectionContainer my-32 gap-6 ">
-      <h4 className="title text-right">
+      <h4 className="title text-center md:text-right max-md:w-full">
         Let's Work <br className="hidden md:block" /> Together
       </h4>
       <Formik
@@ -60,26 +60,26 @@ const Contact = () => {
         validationSchema={contactSchema}
       >
         {({ errors, isSubmitting }) => (
-          <Form className="flex flex-col gap-3 md:w-2/3 lg:w-[35%] items-end">
-            <div className="flex w-full gap-3">
+          <Form className="flex flex-col gap-3 w-full md:w-2/3 lg:w-[35%] items-end">
+            <div className="flex w-full gap-3 max-sm:flex-wrap">
               <Field
                 id="name"
                 name="name"
                 placeholder="Name"
-                className={`input w-[48%] ${errors.name && "border-red-600 border"}`}
+                className={`input w-full sm:w-[48%] ${errors.name && "border-red-600 border"}`}
               />
               <Field
                 id="email"
                 type="email"
                 name="email"
                 placeholder="Email"
-                className={`input w-[48%] ${errors.email && "border-red-600 border"} `}
+                className={`input w-full sm:w-[48%] ${errors.email && "border-red-600 border"} `}
               />
             </div>
             <Field
               className={`input w-full ${
                 errors.message && "border-red-600 border"
-              }`}
+              } h-32`}
               id="message"
               name="message"
               placeholder="Message"

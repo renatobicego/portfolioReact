@@ -41,7 +41,7 @@ const Header = () => {
       <div className="lg:hidden relative z-10">
         <button
           onClick={toggleDrawer(true)}
-          className="mt-8 mr-7 md:mt-12 md:mr-10"
+          className={`mt-8 mr-4 md:mt-12 md:mr-10 ${openDrawer ? 'opacity-0' : 'opacity-100'} transition-all`}
         >
           <img className="w-8 md:w-10 " src="img/icons/menu-50.svg" alt="" />
         </button>

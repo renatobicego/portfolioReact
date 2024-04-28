@@ -8,8 +8,10 @@ import Camera from "./Camera";
 
 const Wanderer = (
   {
+    hasLoaded,
     scrollProgress,
   }: {
+    hasLoaded: boolean;
     scrollProgress: MotionValue;
   },
   props: PerspectiveCameraProps
@@ -31,6 +33,7 @@ const Wanderer = (
       <Camera
         {...props}
         scrollProgress={scrollProgress}
+        hasLoaded={hasLoaded}
       />
       <Suspense fallback={null}>
         <Model />
