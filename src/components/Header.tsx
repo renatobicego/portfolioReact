@@ -43,7 +43,7 @@ const Header = () => {
           onClick={toggleDrawer(true)}
           className={`mt-8 mr-4 md:mt-12 md:mr-10 ${openDrawer ? 'opacity-0' : 'opacity-100'} transition-all`}
         >
-          <img className="w-8 md:w-10 " src="img/icons/menu-50.svg" alt="" />
+          <img className="w-8 md:w-10 " src="img/icons/menu-50.svg" alt="Open button drawer navbar" />
         </button>
         <Drawer
           anchor={"right"}
@@ -52,7 +52,7 @@ const Header = () => {
         >
           <div className="z-20 vertical-header w-20 md:w-32 h-screen overflow-x-hidden flex items-center gap-8 pt-8 md:pt-12">
             <button onClick={toggleDrawer(false)}>
-              <img className="w-6 md:w-8 " src="img/icons/close.svg" alt="" />
+              <img className="w-6 md:w-8 " src="img/icons/close.svg" alt="Close button drawer navbar" />
             </button>
             <nav className="w-full flex items-center gap-x-8 list-none text-white text-sm">
               <li onClick={handleOpen}>

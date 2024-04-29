@@ -22,9 +22,9 @@ const Contact = () => {
   };
   return (
     <section className="sectionContainer my-32 gap-6 ">
-      <h4 className="title text-center md:text-right max-md:w-full">
+      <h3 className="title text-center md:text-right max-md:w-full">
         Let's Work <br className="hidden md:block" /> Together
-      </h4>
+      </h3>
       <Formik
         initialValues={initialValues}
         validateOnBlur={false}

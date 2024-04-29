@@ -63,9 +63,9 @@ const DesignDev = () => {
   };
   return (
     <section className="sectionContainer">
-      <h4 className="title text-right">
+      <h3 className="title text-right">
         Design & <br className="2xl:hidden"/> Development
-      </h4>
+      </h3>
       <button onClick={handleOpen} className="btn-section">
         Projects
       </button>

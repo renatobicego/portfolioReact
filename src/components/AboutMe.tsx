@@ -26,7 +26,7 @@ const AboutMe = ({handleClose} : {handleClose: () => void}) => {
           className="w-6 cursor-pointer  
                        md:w-8 lg:top-6"
           src="img/icons/close.svg"
-          alt=""
+          alt="Close menu About Me"
         />
       </button>
 
@@ -34,7 +34,7 @@ const AboutMe = ({handleClose} : {handleClose: () => void}) => {
         <img
           src="https://firebasestorage.googleapis.com/v0/b/portfolio-renato.appspot.com/o/pp.jpg?alt=media&token=7af562a8-ff58-4daa-92b9-2bde8608b1cc"
           className="w-full h-56 md:h-full object-cover lg:h-auto md:w-1/3 lg:w-1/4 xl:w-[23%] 2xl:w-1/5 rounded-br-lg"
-          alt="profile picture"
+          alt="profile picture of Renato Bicego"
         />
         <div className="w-[90%] mx-auto md:w-[60%] lg:w-auto flex flex-col md:mt-20 md:mb-8 lg:mb-0 lg:mt-10 flex-wrap">
           <div className="lg:flex lg:flex-1">
@@ -69,7 +69,7 @@ const AboutMe = ({handleClose} : {handleClose: () => void}) => {
             <ul className="flex gap-4">
               <li>
                 <a target="_blank" href="https://github.com/renatobicego">
-                  <img className="w-8" src="img/icons/github.png" alt="github" />
+                  <img className="w-8" src="img/icons/github.png" alt="github profile" />
                 </a>
               </li>
               <li>
@@ -77,7 +77,7 @@ const AboutMe = ({handleClose} : {handleClose: () => void}) => {
                   target="_blank"
                   href="https://www.behance.net/renatobicefd92"
                 >
-                  <img className="w-8" src="img/icons/behance.png" alt="behance" />
+                  <img className="w-8" src="img/icons/behance.png" alt="behance profile" />
                 </a>
               </li>
               <li>
@@ -85,12 +85,12 @@ const AboutMe = ({handleClose} : {handleClose: () => void}) => {
                   target="_blank"
                   href="https://www.linkedin.com/in/renatobicego/"
                 >
-                  <img className="w-8" src="img/icons/linkedin.png" alt="linkedin" />
+                  <img className="w-8" src="img/icons/linkedin.png" alt="linkedin profile" />
                 </a>
               </li>
               <li>
                 <a target="_blank" href="mailto:renato.bicego@gmail.com">
-                  <img className="w-8" src="img/icons/mail.png" alt="email direction" />
+                  <img className="w-8" src="img/icons/mail.png" alt="email direction profile" />
                 </a>
               </li>
             </ul>

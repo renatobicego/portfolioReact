@@ -86,9 +86,9 @@ const Photography = () => {
   };
   return (
     <section className="sectionContainer">
-      <h4 className="title text-right">
+      <h3 className="title text-right">
         Photography
-      </h4>
+      </h3>
       <button onClick={handleOpen} className="btn-section shadow">
         Take a Look
       </button>

@@ -43,10 +43,10 @@
 
 @layer components {
   .title {
-    @apply drop-shadow-xl text-4xl xs:text-5xl md:text-7xl lg:text-6xl 3xl:text-8xl
+    @apply drop-shadow-xl text-4xl sm:text-5xl md:text-7xl lg:text-6xl 3xl:text-8xl
   }
   .subtitle {
-    @apply drop-shadow-xl text-xl xs:text-3xl md:text-4xl lg:text-3xl 3xl:text-5xl text-right
+    @apply drop-shadow-xl text-xl sm:text-2xl md:text-4xl lg:text-3xl 3xl:text-5xl text-right
   }
   .input {
     @apply p-4 bg-[#ffffff82] backdrop-blur-sm placeholder:text-[#222222] rounded-[30px] outline-none resize-none shadow-md
