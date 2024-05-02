@@ -7,7 +7,7 @@ import { MotionValue, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import useMousePosition from "../utils/useMousePosition";
 import * as THREE from "three";
-import { Html, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
 
 interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
