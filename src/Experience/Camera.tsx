@@ -172,9 +172,6 @@ const Camera = (
   return (
     <group ref={cameraGroupRef}>
       <PerspectiveCamera makeDefault {...props} />
-      <Html className="fixed left-4 top-4">
-        {xValue} {yValue}
-      </Html>
     </group>
   );
 };
