@@ -7,7 +7,7 @@ import { MotionValue, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import useMousePosition from "../utils/useMousePosition";
 import * as THREE from "three";
-import { PerspectiveCamera } from "@react-three/drei";
+import { Html, PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
 
 interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
@@ -114,20 +114,20 @@ const Camera = (
       if (beta !== null && gamma !== null) {
         setXValue(
           gsap.utils.clamp(
-            -1,
-            1,
+            -2,
+            2,
             isLandscape
               ? gsap.utils.mapRange(-45, 45, -2, 2, beta)
-              : gsap.utils.mapRange(-45, 45, -2, 2, gamma)
+              : gsap.utils.mapRange(-45, 45, beta >= 90 ? 2 : -2, beta >= 90 ? -2 : 2, gamma)
           )
         );
         setYValue(
           gsap.utils.clamp(
-            -2,
-            2,
+            -4,
+            4,
             isLandscape
-              ? gsap.utils.mapRange(20, 70, 2, -2, Math.abs(gamma))
-              : gsap.utils.mapRange(20, 70, 2, -2, beta)
+              ? gsap.utils.mapRange(-20, 200, 4, -4, Math.abs(gamma))
+              : gsap.utils.mapRange(-20, 200, 4, -4, beta)
           )
         );
       }
@@ -172,6 +172,9 @@ const Camera = (
   return (
     <group ref={cameraGroupRef}>
       <PerspectiveCamera makeDefault {...props} />
+      <Html className="fixed left-4 top-4">
+        {xValue} {yValue}
+      </Html>
     </group>
   );
 };
